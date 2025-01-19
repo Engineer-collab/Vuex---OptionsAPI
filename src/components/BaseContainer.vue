@@ -2,6 +2,7 @@
   <section>
     <h2>{{ title }}</h2>
     <the-counter></the-counter>
+    <change-counter></change-counter>
     
     <slot></slot>
   </section>
@@ -9,10 +10,12 @@
 
 <script>
 import TheCounter from './TheCounter.vue';
+import ChangeCounter from './ChangeCounter.vue';
 
 export default {
   components:{
-    TheCounter
+    TheCounter,
+    ChangeCounter,
   },
   props: ['title'],
  
