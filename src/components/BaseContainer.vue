@@ -1,15 +1,22 @@
 <template>
   <section>
     <h2>{{ title }}</h2>
-    <h3>{{ this.$store.state.counter }}</h3>
-    <button>Add 1</button>
+    <the-counter></the-counter>
+    
     <slot></slot>
   </section>
 </template>
 
 <script>
+import TheCounter from './TheCounter.vue';
+
 export default {
+  components:{
+    TheCounter
+  },
   props: ['title'],
+ 
+
 };
 </script>
 
