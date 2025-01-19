@@ -1,6 +1,8 @@
 <template>
   <section>
     <h2>{{ title }}</h2>
+    <h3>{{ this.$store.state.counter }}</h3>
+    <button>Add 1</button>
     <slot></slot>
   </section>
 </template>
