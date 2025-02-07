@@ -1,15 +1,23 @@
 <template>
-    <button @click="addOne">Add 10</button>
+    <button @click="inc">Add 2</button>
+    <button @click="increase({value:10})">Add 11</button>
 </template>
 
 
 <script>
+import { mapActions } from 'vuex';
+
+
 export default {
-methods:{
-    addOne(){
-        this.$store.commit('increase',{value:10});
-    }
-}
+    methods: {
+    // addOne() {
+    //   this.$store.commit('increment');
+    // }
+   ...mapActions({
+    inc:'numbers/increment',
+    increase:'numbers/increase'
+   })
+  }
 }
 </script>
 

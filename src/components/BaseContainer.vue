@@ -1,23 +1,18 @@
 <template>
-  <section>
+  
     <h2>{{ title }}</h2>
-    <the-counter></the-counter>
-    <change-counter></change-counter>
-    
     <slot></slot>
-  </section>
+  
 </template>
 
 <script>
-import TheCounter from './TheCounter.vue';
-import ChangeCounter from './ChangeCounter.vue';
+
 
 export default {
   components:{
-    TheCounter,
-    ChangeCounter,
+    
   },
-  props: ['title'],
+  props: ['title'], 
  
 
 };
